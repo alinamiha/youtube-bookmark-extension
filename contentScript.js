@@ -63,6 +63,15 @@
             });
 
             response(currentVideoBookmarks);
+        } else if (type === 'EDIT') {
+            currentVideoBookmarks.forEach(bookmark => {
+                if (bookmark.time === Number(value.bookmarkTime)) {
+                    bookmark.desc = value.inputValue
+                }
+            })
+            chrome.storage.sync.set({
+                [currentVideo]: JSON.stringify(currentVideoBookmarks)
+            });
         }
     });
 

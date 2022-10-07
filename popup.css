@@ -52,3 +52,16 @@
     flex: auto;
     text-align: right;
 }
+
+.bookmark-input {
+    border: none;
+}
+
+.bookmark-input-save {
+    background: url(/assets/save.png) no-repeat right;
+    background-size: 15px;
+    padding-right: 15px;
+    height: 13.5px;
+    border: 0;
+    cursor: pointer;
+}
